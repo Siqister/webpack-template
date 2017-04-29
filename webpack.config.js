@@ -22,7 +22,8 @@ module.exports = {
 				},
 				include:__dirname+'/src'
 			},
-			{test:/\.css$/, loader:"style-loader!css-loader"},
+			{ test: /\.json$/,loader:"json-loader"},
+			{ test: /\.css$/, loader:"style-loader!css-loader"},
 			{ test: /\.woff(\d+)?$/, loader: 'url?prefix=font/&limit=5000&mimetype=application/font-woff' },
          	{ test: /\.ttf$/, loader: 'file?prefix=font/' },
          	{ test: /\.eot$/, loader: 'file?prefix=font/' },
