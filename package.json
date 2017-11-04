@@ -23,12 +23,12 @@
     "path": "^0.12.7",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "^3.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "eslint": "^3.19.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "d3": "^4.8.0",
-    "eslint": "^3.19.0"
+    "react": "^16.0.0"
   }
 }
