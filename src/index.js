@@ -1,3 +1,1 @@
-import 'bootstrap/dist/css/bootstrap.css';
-
-console.log('Starting index.js');
+console.log('index.js');
