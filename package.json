@@ -4,9 +4,11 @@
   "description": "Project template with React, Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha './src/**/*.test.js' --compilers js:babel-core/register",
+    "test:watch": "npm test -- --watch",
     "start": "webpack-dev-server --config webpack.config.dev.js --inline",
     "build": "webpack -p --config webpack.config.prod.js",
+    "dev": "parallelshell 'npm run test:watch' 'npm start'",
     "lint": "eslint src"
   },
   "author": "",
@@ -21,8 +23,12 @@
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.0",
+    "expect": "^22.1.0",
     "file-loader": "^0.11.1",
+    "mocha": "^5.0.0",
+    "parallelshell": "^3.0.2",
     "path": "^0.12.7",
+    "react-test-renderer": "^16.2.0",
     "style-loader": "^0.17.0",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "url-loader": "^0.5.8",
@@ -34,7 +40,7 @@
     "react": "^16.0.0"
   },
   "babel": {
-    "presets":[
+    "presets": [
       "stage-2",
       "es2015"
     ]
