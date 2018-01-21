@@ -1,11 +1,11 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "description": "Template project with webpack and babel set up",
+  "description": "Project template with React, Webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
+    "start": "webpack-dev-server --config webpack.config.dev.js --inline",
     "build": "webpack -p --config webpack.config.prod.js",
     "lint": "eslint src"
   },
@@ -31,7 +31,12 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "react": "^16.0.0"
+  },
+  "babel": {
+    "presets":[
+      "stage-2",
+      "es2015"
+    ]
   }
 }

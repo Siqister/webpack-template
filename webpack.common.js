@@ -3,7 +3,10 @@
 const path = require('path');
 
 module.exports = {
-	entry:'./src/index.js',
+	entry:[
+		'./src/index.js',
+		'./src/index.html'
+	],
 	output:{
 		path: path.resolve(__dirname,'dist'),
 		filename:'bundle.js'
@@ -33,7 +36,8 @@ module.exports = {
          	{ test: /\.svg$/, loader: 'file-loader?prefix=font/' },
          	{ test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff"},
          	{ test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
-         	{ test: /\.(png|svg|jpg|gif)$/, loader:"file-loader"}
+         	{ test: /\.(png|svg|jpg|gif)$/, loader:"file-loader"},
+         	{ test: /\.html$/, loader: 'file-loader?name=[name].[ext]'}
 		]
 	}
 }
