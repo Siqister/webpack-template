@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha './src/**/*.test.js' --compilers js:babel-core/register",
     "test:watch": "npm test -- --watch",
-    "start": "webpack-dev-server --config webpack.config.dev.js --inline",
+    "start": "webpack-dev-server --mode development --config webpack.config.dev.js --inline",
     "build": "webpack --mode production --config webpack.config.prod.js",
     "dev": "parallelshell 'npm run test:watch' 'npm start'",
     "lint": "eslint src"
