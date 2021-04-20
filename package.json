@@ -4,11 +4,8 @@
   "description": "Project template with React, Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './src/**/*.test.js' --compilers js:babel-core/register",
-    "test:watch": "npm test -- --watch",
     "start": "webpack serve --mode development --config webpack.config.dev.js --inline",
     "build": "webpack --mode production --config webpack.config.prod.js",
-    "dev": "parallelshell 'npm run test:watch' 'npm start'",
     "lint": "eslint src"
   },
   "author": "",
@@ -22,9 +19,7 @@
     "css-loader": "^5.2.4",
     "eslint": "^7.24.0",
     "eslint-plugin-react": "^7.13.0",
-    "expect": "^23.6.0",
     "file-loader": "^6.2.0",
-    "mocha": "^5.2.0",
     "parallelshell": "^3.0.2",
     "path": "^0.12.7",
     "style-loader": "^2.0.0",
